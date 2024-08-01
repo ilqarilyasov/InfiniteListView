@@ -8,29 +8,32 @@
 import XCTest
 @testable import InfiniteListView
 
-final class InfiniteListViewTests: XCTestCase {
+final class ListViewModelTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewModel: ListViewModel!
+
+    override func setUp() {
+        super.setUp()
+        viewModel = ListViewModel()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testLoadMockData() {
+        viewModel.loadMockData()
+        XCTAssertFalse(viewModel.items.isEmpty)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testLoadMoreData() {
+        viewModel.loadMoreData()
+        XCTAssertTrue(viewModel.isLoading)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let expectation = self.expectation(description: "Load more data")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertFalse(self.viewModel.items.isEmpty)
+            XCTAssertFalse(self.viewModel.isLoading)
+            expectation.fulfill()
         }
-    }
 
+        waitForExpectations(timeout: 2, handler: nil)
+    }
 }

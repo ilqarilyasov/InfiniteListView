@@ -12,8 +12,7 @@
 		DAD3C9102C5BDDAC00E8126B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3C90F2C5BDDAC00E8126B /* Assets.xcassets */; };
 		DAD3C9132C5BDDAC00E8126B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3C9122C5BDDAC00E8126B /* Preview Assets.xcassets */; };
 		DAD3C91D2C5BDDAD00E8126B /* InfiniteListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C91C2C5BDDAD00E8126B /* InfiniteListViewTests.swift */; };
-		DAD3C9272C5BDDAD00E8126B /* InfiniteListViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C9262C5BDDAD00E8126B /* InfiniteListViewUITests.swift */; };
-		DAD3C9292C5BDDAD00E8126B /* InfiniteListViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C9282C5BDDAD00E8126B /* InfiniteListViewUITestsLaunchTests.swift */; };
+		DAD3C9362C5BDDC900E8126B /* InfiniteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C9352C5BDDC900E8126B /* InfiniteListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,8 @@
 		DAD3C9182C5BDDAD00E8126B /* InfiniteListViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteListViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD3C91C2C5BDDAD00E8126B /* InfiniteListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteListViewTests.swift; sourceTree = "<group>"; };
 		DAD3C9222C5BDDAD00E8126B /* InfiniteListViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteListViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAD3C9262C5BDDAD00E8126B /* InfiniteListViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteListViewUITests.swift; sourceTree = "<group>"; };
-		DAD3C9282C5BDDAD00E8126B /* InfiniteListViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteListViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAD3C9352C5BDDC900E8126B /* InfiniteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteListViewModel.swift; sourceTree = "<group>"; };
+		DAD3C9372C5BEFFF00E8126B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +73,9 @@
 		DAD3C8FF2C5BDDA900E8126B = {
 			isa = PBXGroup;
 			children = (
+				DAD3C9372C5BEFFF00E8126B /* README.md */,
 				DAD3C90A2C5BDDA900E8126B /* InfiniteListView */,
 				DAD3C91B2C5BDDAD00E8126B /* InfiniteListViewTests */,
-				DAD3C9252C5BDDAD00E8126B /* InfiniteListViewUITests */,
 				DAD3C9092C5BDDA900E8126B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD3C90B2C5BDDA900E8126B /* InfiniteListViewApp.swift */,
+				DAD3C9352C5BDDC900E8126B /* InfiniteListViewModel.swift */,
 				DAD3C90D2C5BDDA900E8126B /* ContentView.swift */,
 				DAD3C90F2C5BDDAC00E8126B /* Assets.xcassets */,
 				DAD3C9112C5BDDAC00E8126B /* Preview Content */,
@@ -116,15 +116,6 @@
 				DAD3C91C2C5BDDAD00E8126B /* InfiniteListViewTests.swift */,
 			);
 			path = InfiniteListViewTests;
-			sourceTree = "<group>";
-		};
-		DAD3C9252C5BDDAD00E8126B /* InfiniteListViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DAD3C9262C5BDDAD00E8126B /* InfiniteListViewUITests.swift */,
-				DAD3C9282C5BDDAD00E8126B /* InfiniteListViewUITestsLaunchTests.swift */,
-			);
-			path = InfiniteListViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +250,7 @@
 			files = (
 				DAD3C90E2C5BDDA900E8126B /* ContentView.swift in Sources */,
 				DAD3C90C2C5BDDA900E8126B /* InfiniteListViewApp.swift in Sources */,
+				DAD3C9362C5BDDC900E8126B /* InfiniteListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD3C9272C5BDDAD00E8126B /* InfiniteListViewUITests.swift in Sources */,
-				DAD3C9292C5BDDAD00E8126B /* InfiniteListViewUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
